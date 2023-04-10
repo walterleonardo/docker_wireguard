@@ -26,4 +26,8 @@ services:
       - 51820:51820/udp
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
+    dns:
+      - 8.8.8.8
+        #- 127.0.0.1
+        #- 1.1.1.1
     restart: unless-stopped
